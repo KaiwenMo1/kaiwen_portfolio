@@ -1,0 +1,6 @@
+# Local resume docs
+*.docx
+
+# OS/editor
+.DS_Store
+.vscode/
