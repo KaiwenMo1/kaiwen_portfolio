@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaiwen Mo | Software Engineer</title>
+  <meta name="description" content="Personal portfolio website for Kaiwen Mo, CS + Economics at University of Michigan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top">Kaiwen Mo</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container reveal">
+      <p class="eyebrow">CS + Economics @ University of Michigan</p>
+      <h1>Software Engineer focused on distributed systems, applied ML, and full-stack products.</h1>
+      <p class="hero-copy">I build production-minded systems from backend infrastructure to computer vision pipelines, and ship projects with measurable outcomes.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="Kaiwen_Resume_SDE%20-re.docx" download>Download Resume</a>
+      </div>
+      <ul class="quick-facts">
+        <li><span>GPA</span>3.80 / 4.00</li>
+        <li><span>Graduation</span>May 2026</li>
+        <li><span>Internship</span>AI Team Lead @ Next Play Games</li>
+      </ul>
+    </section>
+
+    <section id="about" class="container panel reveal">
+      <h2>About</h2>
+      <p>I am currently completing a B.S. in Computer Science and Economics Honors at the University of Michigan. My recent work includes distributed systems engineering (MapReduce), search infrastructure (inverted index + ranking), and applied computer vision for real-time sports analytics.</p>
+      <p>I enjoy building systems that combine algorithmic depth with practical user impact.</p>
+    </section>
+
+    <section id="projects" class="container reveal">
+      <div class="section-head">
+        <h2>Selected Projects</h2>
+        <p>Use short video demos for these projects. Keep each demo under 90 seconds and focus on architecture, your contribution, and measurable results.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card">
+          <p class="tag">Video Demo</p>
+          <h3>Football AI Referee Pipeline</h3>
+          <p>Real-time multi-stage pipeline with object detection, coordinate projection, and event classification for football game analysis.</p>
+          <ul>
+            <li>Computer vision inference + rules engine + downstream classifier</li>
+            <li>Applied to live/multi-angle game footage</li>
+          </ul>
+          <a href="#" class="inline-link">Add video link</a>
+        </article>
+
+        <article class="project-card">
+          <p class="tag">Video Demo</p>
+          <h3>Distributed MapReduce Framework</h3>
+          <p>Manager-worker execution framework with socket-based coordination and parallel map/reduce processing.</p>
+          <ul>
+            <li>Task scheduling, worker registration, and result aggregation</li>
+            <li>Concurrent architecture and fault-handling discussion</li>
+          </ul>
+          <a href="#" class="inline-link">Add video link</a>
+        </article>
+
+        <article class="project-card">
+          <p class="tag">Video Demo</p>
+          <h3>Scalable Search Engine</h3>
+          <p>Segmented inverted-index construction and relevance ranking using tf-idf + PageRank with REST API query serving.</p>
+          <ul>
+            <li>Backend ranking pipeline with JSON API responses</li>
+            <li>Good project for systems + information retrieval roles</li>
+          </ul>
+          <a href="#" class="inline-link">Add video link</a>
+        </article>
+
+        <article class="project-card">
+          <p class="tag">Video Demo</p>
+          <h3>Computer Security Project Suite</h3>
+          <p>Security lab portfolio covering web exploits, crypto attacks, network forensics, and memory corruption mitigations.</p>
+          <ul>
+            <li>SQLi/XSS/CSRF testing and mitigation</li>
+            <li>Autopsy + Wireshark + low-level exploit analysis</li>
+          </ul>
+          <a href="#" class="inline-link">Add video link</a>
+        </article>
+
+        <article class="project-card emphasis">
+          <p class="tag">Live Deployment</p>
+          <h3>Instagram-Style Social Platform</h3>
+          <p>Deployed full-stack app built with React, Flask, SQL, and AWS EC2 (infinite scroll, likes, sessions, API backend).</p>
+          <ul>
+            <li>Use this as your one interactive live project</li>
+            <li>Pair with a 60-second architecture walkthrough video</li>
+          </ul>
+          <a href="#" class="inline-link strong">Add deployed website URL</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container panel reveal">
+      <h2>Experience Snapshot</h2>
+      <div class="timeline">
+        <div>
+          <p class="time">May 2025 - Aug 2025</p>
+          <h3>Next Play Games Inc. | Software Engineer Intern (AI Team Lead)</h3>
+        </div>
+        <div>
+          <p class="time">Jan 2026 - Present</p>
+          <h3>Wade Trim MDP | Student Research Engineer (Web Dev Team)</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="container panel reveal">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:kaiwenmo@umich.edu">kaiwenmo@umich.edu</a></p>
+      <p>LinkedIn: <a href="#">Add LinkedIn URL</a></p>
+      <p>GitHub: <a href="#">Add GitHub URL</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Kaiwen Mo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
