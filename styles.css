@@ -170,6 +170,24 @@ nav a {
   padding-left: 1rem;
 }
 
+.club-row {
+  line-height: 1.9;
+}
+
+.sub-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.3rem 0 0.15rem;
+}
+
+.club-pill {
+  display: inline-block;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.75);
+}
+
 .tag {
   display: inline-block;
   margin: 0;
@@ -194,6 +212,49 @@ nav a {
 .demo-note {
   margin: 0.6rem 0 0;
   font-size: 0.86rem;
+  color: var(--muted);
+}
+
+.research-figure {
+  width: 100%;
+  margin: 0.4rem 0 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+}
+
+.result-sep {
+  color: var(--muted);
+  margin: 0 0.25rem;
+}
+
+.club-dortmund {
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.club-manutd {
+  font-weight: 700;
+  color: #b91c1c;
+}
+
+.club-juventus {
+  font-weight: 700;
+  color: #111827;
+}
+
+.metric-rise {
+  font-weight: 700;
+  color: #b91c1c;
+}
+
+.metric-drop {
+  font-weight: 700;
+  color: #15803d;
+}
+
+.legal-note {
+  margin: 0.55rem 0 0;
+  font-size: 0.84rem;
   color: var(--muted);
 }
 
