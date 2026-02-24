@@ -260,14 +260,46 @@ nav a {
 
 .timeline {
   display: grid;
-  gap: 0.8rem;
+  gap: 0.9rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 0.8rem 0.95rem 0.8rem 1.1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  border-radius: 12px 0 0 12px;
+  background: linear-gradient(180deg, #0f766e 0%, #f97316 100%);
 }
 
 .time {
-  margin: 0;
-  font-size: 0.86rem;
+  margin: 0 0 0.2rem;
+  font-size: 0.8rem;
   color: var(--muted);
   font-family: "Space Mono", monospace;
+  letter-spacing: 0.02em;
+}
+
+.timeline-org {
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+
+.timeline-role {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.94rem;
 }
 
 .site-footer {
