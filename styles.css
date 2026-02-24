@@ -191,6 +191,12 @@ nav a {
   font-weight: 700;
 }
 
+.demo-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.86rem;
+  color: var(--muted);
+}
+
 .timeline {
   display: grid;
   gap: 0.8rem;
