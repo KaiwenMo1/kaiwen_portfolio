@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search Engine Demo | Kaiwen Mo</title>
+  <meta name="description" content="Demo snapshot of Kaiwen Mo's scalable search engine project." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Kaiwen Mo</a>
+    <nav>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container search-demo-main">
+    <section class="panel search-demo-panel">
+      <p class="tag">Project Snapshot</p>
+      <h1>Scalable Search Engine</h1>
+      <p>
+        Multi-service search system with segmented index servers and a Flask frontend.
+        The screenshot below shows local execution with ranked result retrieval.
+      </p>
+      <ul>
+        <li>Stack: Python, Flask, SQLite, inverted index + tf-idf ranking</li>
+        <li>Services: 3 index shards + 1 search server</li>
+        <li>Demo mode: local run with controlled dataset</li>
+      </ul>
+      <img src="images/search-demo.png" alt="Search engine demo screenshot" class="search-demo-image" />
+      <div class="hero-actions">
+        <a class="btn primary" href="index.html#projects">Back to Projects</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
