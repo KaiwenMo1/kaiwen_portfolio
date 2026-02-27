@@ -161,6 +161,10 @@ nav a {
   background: linear-gradient(140deg, #ffffff 0%, #edfffb 100%);
 }
 
+.project-card.full-width {
+  grid-column: 1 / -1;
+}
+
 .project-card h3 {
   margin: 0.2rem 0 0.5rem;
 }
@@ -216,8 +220,10 @@ nav a {
 }
 
 .research-figure {
-  width: 100%;
-  margin: 0.4rem 0 0.5rem;
+  width: 50%;
+  min-width: 180px;
+  margin: 0.4rem auto 0.5rem;
+  display: block;
   border-radius: 10px;
   border: 1px solid var(--line);
 }
