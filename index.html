@@ -53,53 +53,56 @@
       </div>
 
       <div class="project-grid">
-        <article class="project-card">
-          <p class="tag">Live Web App</p>
+        <article class="project-card project-stock">
+          <p class="tag tag-stock">Live Web App</p>
           <h3>C++ Stock Market Simulation</h3>
           <p>High-performance exchange simulator with order matching engine, median price reporting, trader analytics, and time-traveler strategy output.</p>
           <ul>
-            <li>Built with C++17, priority queues, and custom CLI flags</li>
-            <li>Demo should show compile, run, and key outputs on sample inputs</li>
+            <li>Implemented a low-latency matching engine in C++17 using priority queues and strict price-time execution semantics.</li>
+            <li>Built multiple analytics modes (median, trader P&L stats, time-traveler analysis) behind a production-style CLI and input parser.</li>
+            <li>Shipped a web runner to demonstrate engine behavior and runtime characteristics end-to-end for recruiters.</li>
           </ul>
           <a href="https://stock-simulation-web.onrender.com" class="inline-link" target="_blank" rel="noopener noreferrer">Launch Stock Simulator</a>
         </article>
 
-        <article class="project-card emphasis">
-          <p class="tag">Live Web App</p>
+        <article class="project-card emphasis project-social">
+          <p class="tag tag-social">Live Web App</p>
           <h3>Full-Stack Social Media Platform</h3>
           <p>Instagram-style app using React + Flask + SQLite with authentication, posts/comments/likes, and infinite scrolling feed via REST APIs.</p>
           <ul>
-            <li>React frontend with paginated API-driven feed</li>
-            <li>Flask backend with session auth and media uploads</li>
+            <li>Developed a React client with API-driven pagination/infinite scroll and stateful UI for posts, likes, and comments.</li>
+            <li>Designed Flask + SQLite backend APIs with session-based authentication, authorization checks, and media upload handling.</li>
+            <li>Deployed and operated a live demo environment, including cold-start tradeoff handling and reliability-focused testing.</li>
           </ul>
           <a href="https://fullstack-social-media-jtd4.onrender.com" class="inline-link strong" target="_blank" rel="noopener noreferrer">Launch Social Web App</a>
           <p class="demo-note">Note: Free-tier hosting may take 30-60 seconds on first load.</p>
         </article>
 
-        <article class="project-card">
-          <p class="tag">Video Demo</p>
+        <article class="project-card project-mapreduce">
+          <p class="tag tag-mapreduce">Video Demo</p>
           <h3>Distributed MapReduce Framework</h3>
           <p>Python manager-worker architecture with CLI job submission, configurable mapper/reducer executables, and socket-based message passing.</p>
           <ul>
             <li>Distributed systems concepts: scheduling, coordination, parallel workers</li>
             <li>Demo should show multi-worker run and output generation</li>
           </ul>
-          <a href="#" class="inline-link">Add architecture demo video</a>
+          <a href="#" class="inline-link">TODO: Add architecture demo video from terminal commands</a>
         </article>
 
-        <article class="project-card">
-          <p class="tag">Live Web App</p>
+        <article class="project-card project-search">
+          <p class="tag tag-search">Live Web App</p>
           <h3>Scalable Search Engine</h3>
           <p>Multi-service search system with segmented index servers and a Flask search frontend, combining tf-idf relevance and PageRank-style ranking.</p>
           <ul>
-            <li>Pipeline includes index building, API-based retrieval, and ranked results rendering</li>
-            <li>Deployed as a process-coordinated demo service for recruiter walkthroughs</li>
+            <li>Built a segmented index architecture (3 shard services + search frontend) to parallelize retrieval and ranking.</li>
+            <li>Implemented query-time scoring that combines tf-idf relevance signals with link-based authority weighting.</li>
+            <li>Engineered process orchestration and fault-aware request handling for stable local and hosted demos.</li>
           </ul>
           <a href="search.html" class="inline-link">View Search Engine Snapshot</a>
         </article>
 
-        <article class="project-card full-width">
-          <p class="tag">Research Project</p>
+        <article class="project-card full-width project-research">
+          <p class="tag tag-research">Research Project</p>
           <h3>Economics Honors Research (ECON 495)</h3>
           <p>Built an automated data pipeline to scrape and reconstruct transfer market activity for publicly traded soccer clubs, then measured event-window market reactions and abnormal returns.</p>
           <ul>
@@ -148,7 +151,7 @@
       <h2>Contact</h2>
       <p>Email: <a href="mailto:kaiwenmo@umich.edu">kaiwenmo@umich.edu</a></p>
       <p>LinkedIn: <a href="https://www.linkedin.com/in/kevin-mo-702185295">https://www.linkedin.com/in/kevin-mo-702185295</a></p>
-      <p>GitHub: <a href="#">Add GitHub URL</a></p>
+      <p>GitHub: <a href="https://github.com/KaiwenMo1">Kaiwen Mo's github page</a></p>
     </section>
   </main>
 
