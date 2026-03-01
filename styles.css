@@ -348,6 +348,21 @@ nav a {
   border-color: #1d4ed8;
 }
 
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.course-col h3 {
+  margin: 0.1rem 0 0.4rem;
+  color: #1d4ed8;
+}
+
+.course-col ul {
+  margin: 0;
+}
+
 .legal-note {
   margin: 0.55rem 0 0;
   font-size: 0.84rem;
@@ -442,6 +457,10 @@ nav a {
 @media (max-width: 900px) {
   .project-grid,
   .quick-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .course-grid {
     grid-template-columns: 1fr;
   }
 
