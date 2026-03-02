@@ -68,6 +68,27 @@ nav a {
   padding: 5rem 0 2rem;
 }
 
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.hero-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-headshot {
+  width: 240px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: var(--card-shadow);
+}
+
 .eyebrow {
   font-family: "Space Mono", monospace;
   color: var(--accent);
@@ -462,6 +483,15 @@ nav a {
 
   .course-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-headshot {
+    width: 180px;
+    height: 180px;
   }
 
   .site-header {
