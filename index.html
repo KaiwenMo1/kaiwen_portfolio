@@ -57,60 +57,116 @@
 
     <section id="projects" class="container reveal">
       <div class="section-head">
-        <h2>Selected Projects</h2>
+        <p class="eyebrow">Selected Engineering Work</p>
+        <h2>Systems, ML products, and research tools.</h2>
       </div>
 
       <div class="project-grid">
-        <article class="project-card project-stock">
-          <p class="tag tag-stock">Live Web App</p>
-          <h3>C++ Stock Market Simulation</h3>
-          <p>High-performance exchange simulator with order matching engine, median price reporting, trader analytics, and time-traveler strategy output.</p>
+        <article class="project-card project-patchguard featured-card">
+          <p class="tag tag-patchguard">Developer Tool</p>
+          <h3>PatchGuard</h3>
+          <p>CI system for AI-generated code that turns pull-request review into reproducible evidence instead of only comments.</p>
           <ul>
-            <li>Implemented a low-latency matching engine in C++17 using priority queues and strict price-time execution semantics.</li>
-            <li>Built multiple analytics modes (median, trader P&L stats, time-traveler analysis) behind a production-style CLI and input parser.</li>
-            <li>Shipped a web runner to demonstrate engine behavior and runtime characteristics end-to-end for recruiters.</li>
+            <li>Analyzes public GitHub PRs, checks out changed code, extracts affected Python functions, and applies configurable merge-risk policy.</li>
+            <li>Runs targeted verification in a Docker sandbox with pytest, Ruff, Bandit, security signals, and deterministic risk scoring.</li>
+            <li>Ships as a CLI, FastAPI backend, React + TypeScript dashboard, static demo mode, and reusable GitHub Action.</li>
+          </ul>
+          <a href="https://kaiwenmo1.github.io/patchguard/" class="inline-link strong" target="_blank" rel="noopener noreferrer">Open PatchGuard Demo</a>
+        </article>
+
+        <article class="project-card project-worldcup featured-card">
+          <p class="tag tag-worldcup">ML Product</p>
+          <h3>2026 World Cup Predictor</h3>
+          <p>Simulation and prediction platform for the expanded 48-team FIFA World Cup format.</p>
+          <ul>
+            <li>Trains Random Forest match-outcome and expected-goals models from historical international results and team feature tables.</li>
+            <li>Simulates group stage, best third-place qualification, knockout rounds, champion odds, exact-score distributions, and bracket paths.</li>
+            <li>Built a FastAPI web app with simulation controls, match predictor, group viewer, live-state refresh API, and exportable predictions.</li>
+          </ul>
+          <p class="demo-note">Live deployment coming after final data/API cleanup.</p>
+        </article>
+
+        <article class="project-card project-stock">
+          <p class="tag tag-stock">Systems Demo</p>
+          <h3>C++ Stock Market Simulation</h3>
+          <p>High-performance exchange simulator with order matching, median price reporting, trader analytics, and time-traveler strategy output.</p>
+          <ul>
+            <li>Implemented a low-latency C++17 matching engine with priority queues, custom parsing, and strict price-time execution semantics.</li>
+            <li>Exposed multiple analytics modes through production-style CLI flags and a hosted Flask runner for demoing runtime behavior.</li>
           </ul>
           <a href="https://stock-simulation-web.onrender.com" class="inline-link" target="_blank" rel="noopener noreferrer">Launch Stock Simulator</a>
         </article>
 
-        <article class="project-card emphasis project-social">
-          <p class="tag tag-social">Live Web App</p>
-          <h3>Full-Stack Social Media Platform</h3>
-          <p>Instagram-style app using React + Flask + SQLite with authentication, posts/comments/likes, and infinite scrolling feed via REST APIs.</p>
+        <article class="project-card project-transfer">
+          <p class="tag tag-transfer">Research System</p>
+          <h3>Transfer Rumor Market Impact Engine</h3>
+          <p>Python research pipeline for estimating how football transfer rumors and confirmed transfers affect public club stocks.</p>
           <ul>
-            <li>Developed a React client with API-driven pagination/infinite scroll and stateful UI for posts, likes, and comments.</li>
-            <li>Designed Flask + SQLite backend APIs with session-based authentication, authorization checks, and media upload handling.</li>
-            <li>Deployed and operated a live demo environment, including cold-start tradeoff handling and reliability-focused testing.</li>
+            <li>Ingests transfer records, club stock prices, and GDELT/news articles, then normalizes sources into event-study datasets.</li>
+            <li>Extracts transfer claims, matches rumors to likely transfer records, and scores credibility by source, journalist, club, and claim quality.</li>
+            <li>Frames the target as abnormal return around rumor/transfer windows to avoid misleading raw-price movement.</li>
           </ul>
-          <a href="https://fullstack-social-media-jtd4.onrender.com" class="inline-link strong" target="_blank" rel="noopener noreferrer">Launch Social Web App</a>
-          <p class="demo-note">Note: Free-tier hosting may take 30-60 seconds on first load.</p>
-        </article>
-
-        <article class="project-card project-mapreduce">
-          <p class="tag tag-mapreduce">Video Demo</p>
-          <h3>Distributed MapReduce Framework</h3>
-          <p>Python manager-worker architecture with CLI job submission, configurable mapper/reducer executables, and socket-based message passing.</p>
-          <ul>
-            <li>Distributed systems concepts: scheduling, coordination, parallel workers</li>
-            <li>Demo should show multi-worker run and output generation</li>
-          </ul>
-          <a href="#" class="inline-link">TODO: Add architecture demo video from terminal commands</a>
+          <p class="demo-note">Research dashboard planned after more backtesting.</p>
         </article>
 
         <article class="project-card project-search">
-          <p class="tag tag-search">Live Web App</p>
+          <p class="tag tag-search">Search Infra</p>
           <h3>Scalable Search Engine</h3>
-          <p>Multi-service search system with segmented index servers and a Flask search frontend, combining tf-idf relevance and PageRank-style ranking.</p>
+          <p>Multi-service search system with segmented index servers and a Flask search frontend.</p>
           <ul>
-            <li>Built a segmented index architecture (3 shard services + search frontend) to parallelize retrieval and ranking.</li>
+            <li>Built a 3-shard index architecture to parallelize retrieval and combine results through a search aggregator.</li>
             <li>Implemented query-time scoring that combines tf-idf relevance signals with link-based authority weighting.</li>
-            <li>Engineered process orchestration and fault-aware request handling for stable local and hosted demos.</li>
           </ul>
           <a href="search.html" class="inline-link">View Search Engine Snapshot</a>
         </article>
 
+        <article class="project-card project-asl">
+          <p class="tag tag-asl">Applied ML</p>
+          <h3>ASL Sign Translator</h3>
+          <p>Real-time sign-language translation prototype combining browser landmark capture, WebSocket inference, and sequence modeling.</p>
+          <ul>
+            <li>Built a Next.js frontend and FastAPI WebSocket backend for streaming landmark sequences and returning structured predictions.</li>
+            <li>Integrated MediaPipe hand landmarks, normalization/feature engineering, gesture gating, and a GRU-based Keras model path.</li>
+          </ul>
+          <p class="demo-note">Demo polish in progress.</p>
+        </article>
+
+        <article class="project-card project-mapreduce">
+          <p class="tag tag-mapreduce">Distributed Systems</p>
+          <h3>Distributed MapReduce Framework</h3>
+          <p>Python manager-worker framework with CLI job submission, mapper/reducer executables, and socket-based coordination.</p>
+          <ul>
+            <li>Implemented scheduling, worker coordination, partitioning, fault-aware process handling, and output generation.</li>
+            <li>Best shown through a terminal architecture demo with multiple workers processing a job end-to-end.</li>
+          </ul>
+          <p class="demo-note">Architecture video planned.</p>
+        </article>
+
+        <article class="project-card project-social">
+          <p class="tag tag-social">Full Stack</p>
+          <h3>Full-Stack Social Media Platform</h3>
+          <p>React + Flask + SQLite app with authentication, posts, comments, likes, media uploads, and infinite scrolling feed.</p>
+          <ul>
+            <li>Developed a React client with API-driven pagination and stateful UI for posts, likes, and comments.</li>
+            <li>Designed Flask APIs with session authentication, authorization checks, REST endpoints, and upload handling.</li>
+          </ul>
+          <a href="https://fullstack-social-media-jtd4.onrender.com" class="inline-link" target="_blank" rel="noopener noreferrer">Launch Social Web App</a>
+          <p class="demo-note">Free-tier hosting may take 30-60 seconds on first load.</p>
+        </article>
+
+        <article class="project-card project-wade">
+          <p class="tag tag-wade">NDA-Limited</p>
+          <h3>Wade Trim MDP Geospatial Interface</h3>
+          <p>NDA-restricted infrastructure visualization work. Public portfolio details are intentionally limited.</p>
+          <ul>
+            <li>Contributed to a map-based prototype for inspecting modeled infrastructure data, scenario layers, and result overlays.</li>
+            <li>Public demo will use only approved screenshots and sanitized descriptions.</li>
+          </ul>
+          <p class="demo-note">Approved screenshot placeholder coming soon.</p>
+        </article>
+
         <article class="project-card full-width project-research">
-          <p class="tag tag-research">Research Project</p>
+          <p class="tag tag-research">Honors Research</p>
           <h3>Economics Honors Research (ECON 495)</h3>
           <p>Built an automated data pipeline to scrape and reconstruct transfer market activity for publicly traded soccer clubs, then measured event-window market reactions and abnormal returns.</p>
           <ul>
