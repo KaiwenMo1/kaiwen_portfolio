@@ -517,6 +517,31 @@ nav a {
   gap: 0.9rem;
 }
 
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.education-item {
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--maize);
+  border-radius: 8px;
+  background: #fff;
+  padding: 0.95rem;
+}
+
+.education-item h3 {
+  margin: 0;
+  color: var(--blue);
+  line-height: 1.3;
+}
+
+.education-item p {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
 .timeline-item {
   position: relative;
   padding: 0.8rem 0.95rem 0.8rem 1.1rem;
@@ -594,6 +619,10 @@ nav a {
   }
 
   .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education-grid {
     grid-template-columns: 1fr;
   }
 
