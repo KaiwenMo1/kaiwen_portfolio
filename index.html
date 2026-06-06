@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kaiwen Mo | Software Engineer</title>
   <meta name="description" content="Personal portfolio website for Kaiwen Mo, Software Engineer and UCLA MSCS student." />
+  <meta property="og:title" content="Kaiwen Mo | Software Engineer" />
+  <meta property="og:description" content="Developer tooling, data systems, applied ML, and backend engineering." />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="apple-dynamic">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
   <div class="bg-shape bg-shape-1" aria-hidden="true"></div>
   <div class="bg-shape bg-shape-2" aria-hidden="true"></div>
 
@@ -25,12 +30,12 @@
   </header>
 
   <main id="top">
-    <section class="hero container reveal">
+    <section id="main-content" class="hero container reveal">
       <div class="hero-layout">
         <div class="hero-content">
           <p class="eyebrow">UCLA MSCS + University of Michigan CS/Economics</p>
           <h1>Software Engineer.</h1>
-          <p class="hero-copy">I build production-minded systems from backend infrastructure to computer vision pipelines, and ship projects with measurable outcomes.</p>
+          <p class="hero-copy">I build developer tools, data/ML systems, and backend products that turn messy real-world inputs into testable, user-facing software.</p>
           <div class="hero-actions">
             <a class="btn primary" href="#projects">View Projects</a>
             <a class="btn" href="Kaiwen_Resume_SWE.pdf" download>Download Resume</a>
@@ -38,21 +43,42 @@
         </div>
         <div class="hero-photo-wrap">
           <img src="sun_headshot.jpeg" alt="Kaiwen Mo headshot" class="hero-headshot" />
+          <div class="hero-console" aria-label="Portfolio status">
+            <div class="console-top">
+              <span class="console-dot"></span>
+              <span>portfolio.yaml</span>
+            </div>
+            <dl>
+              <div>
+                <dt>current</dt>
+                <dd>UCLA MSCS</dd>
+              </div>
+              <div>
+                <dt>focus</dt>
+                <dd>dev tools + data systems</dd>
+              </div>
+              <div>
+                <dt>shipping</dt>
+                <dd>PatchGuard, transfer analyst</dd>
+              </div>
+            </dl>
+          </div>
         </div>
       </div>
-      <ul class="quick-facts">
-        <li><span>Graduate Study</span>UCLA M.S. CS, Expected May 2028</li>
-        <li><span>U-M Graduation</span>B.S. CS + Econ Honors, May 2026</li>
-        <li><span>Internship</span>Software Engineer / AI Team Lead</li>
-      </ul>
+    </section>
+
+    <section class="credential-rail container reveal" aria-label="Professional snapshot">
+      <p><span>Current</span>UCLA M.S. Computer Science</p>
+      <p><span>Foundation</span>Michigan CS + Economics Honors</p>
+      <p><span>Engineering</span>C++ · Python · TypeScript · Docker</p>
+      <p><span>Experience</span>Software Engineer / AI Team Lead</p>
     </section>
 
     <section id="about" class="container panel reveal">
       <h2>About</h2>
       <p>I completed a B.S. in Computer Science and Economics Honors at the University of Michigan and am continuing with an M.S. in Computer Science at UCLA.</p>
-      <p>My recent work spans developer tooling, distributed systems, search infrastructure, applied machine learning, full-stack products, and data-heavy sports/finance research.</p>
-      <p>I focus on building software with clear systems thinking, measurable behavior, and a product mindset.</p>
-      <p>I enjoy building systems that combine algorithmic depth with practical user impact.</p>
+      <p>My strongest work sits where product sense meets systems depth: developer tooling, distributed coordination, search infrastructure, ML-backed forecasting, and data-heavy sports/finance research.</p>
+      <p>I like projects with inspectable behavior: clear APIs, reproducible pipelines, measurable outputs, and interfaces that make complex systems easier to trust.</p>
       <p><a href="my_fun_side.html" class="inline-link">See my fun side (photos, hobbies, travel, and coursework)</a></p>
     </section>
 
@@ -77,70 +103,115 @@
 
     <section id="projects" class="container reveal">
       <div class="section-head">
-        <p class="eyebrow">Selected Engineering Work</p>
-        <h2>Systems, ML products, and research tools.</h2>
+        <h2>Engineering proof, not just project names.</h2>
+        <p>Ordered for recruiter scan: developer infrastructure and data/ML systems first, then systems foundations and full-stack products.</p>
       </div>
 
       <div class="project-grid">
-        <article class="project-card project-patchguard featured-card">
-          <p class="tag tag-patchguard">Developer Tool</p>
-          <h3>PatchGuard</h3>
-          <p>CI system for AI-generated code that turns pull-request review into reproducible evidence instead of only comments.</p>
-          <ul>
-            <li>Analyzes public GitHub PRs, checks out changed code, extracts affected Python functions, and applies configurable merge-risk policy.</li>
-            <li>Runs targeted verification in a Docker sandbox with pytest, Ruff, Bandit, security signals, and deterministic risk scoring.</li>
-            <li>Ships as a CLI, FastAPI backend, React + TypeScript dashboard, static demo mode, and reusable GitHub Action.</li>
-          </ul>
-          <a href="https://kaiwenmo1.github.io/patchguard/" class="inline-link strong" target="_blank" rel="noopener noreferrer">Open PatchGuard Demo</a>
+        <article class="project-card case-study-card project-patchguard featured-card">
+          <div class="project-copy">
+            <p class="tag tag-patchguard">CI / Security Tool</p>
+            <h3>PatchGuard</h3>
+            <p>CI system for AI-generated code that turns pull-request review into reproducible evidence, policy decisions, and reviewer-ready reports.</p>
+            <ul>
+              <li>Fetches public GitHub PRs, checks out changed code, extracts affected Python functions with AST analysis, and applies configurable merge-risk policy.</li>
+              <li>Runs targeted verification in a Docker sandbox with pytest, Ruff, Bandit, security signals, partial-report handling, and deterministic risk scoring.</li>
+              <li>Ships across CLI, FastAPI, React + TypeScript, GitHub Actions, and PR comments.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://kaiwenmo1.github.io/patchguard/" class="inline-link strong" target="_blank" rel="noopener noreferrer">Open Demo</a>
+              <a href="https://github.com/KaiwenMo1/patchguard" class="inline-link" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
+            </div>
+          </div>
+          <a class="project-visual project-visual-patchguard" href="https://kaiwenmo1.github.io/patchguard/" target="_blank" rel="noopener noreferrer" aria-label="Open PatchGuard demo">
+            <img src="images/patchguard-dashboard.svg" alt="PatchGuard dashboard showing merge risk, policy gate, and verification evidence" />
+          </a>
         </article>
 
-        <article class="project-card project-worldcup featured-card">
-          <p class="tag tag-worldcup">ML Product</p>
-          <h3>2026 World Cup Predictor</h3>
-          <p>Simulation and prediction platform for the expanded 48-team FIFA World Cup format.</p>
-          <ul>
-            <li>Trains Random Forest match-outcome and expected-goals models from historical international results and team feature tables.</li>
-            <li>Simulates group stage, best third-place qualification, knockout rounds, champion odds, exact-score distributions, and bracket paths.</li>
-            <li>Built a FastAPI web app with simulation controls, match predictor, group viewer, live-state refresh API, and exportable predictions.</li>
-          </ul>
-          <p class="demo-note">Live deployment coming after final data/API cleanup.</p>
+        <article class="project-card case-study-card project-transfer featured-card">
+          <div class="project-copy">
+            <p class="tag tag-transfer">Data Intelligence System</p>
+            <h3>Transfer Rumor Market Impact Engine</h3>
+            <p>Turns noisy transfer coverage into structured claims, credibility scores, stock-event datasets, and analyst-facing evidence.</p>
+            <ul>
+              <li>Built ingestion, claim extraction, duplicate clustering, public-club ticker matching, and event-study feature generation.</li>
+              <li>Connects credibility scoring with market context, data-quality audits, backtests, daily briefings, and Evidence RAG.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://kaiwenmo1.github.io/soccer_transfer_rumor_impacts/" class="inline-link strong" target="_blank" rel="noopener noreferrer">Open Dashboard</a>
+              <a href="https://github.com/KaiwenMo1/soccer_transfer_rumor_impacts" class="inline-link" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
+            </div>
+          </div>
+          <a class="project-visual" href="https://kaiwenmo1.github.io/soccer_transfer_rumor_impacts/" target="_blank" rel="noopener noreferrer" aria-label="Open transfer market impact dashboard">
+            <img src="images/transfer-dashboard.svg" alt="Transfer market impact dashboard with stock signals, watchlist, and credibility leaderboards" />
+          </a>
         </article>
 
-        <article class="project-card project-stock">
-          <p class="tag tag-stock">Systems Demo</p>
+        <article class="project-card case-study-card project-worldcup featured-card">
+          <div class="project-copy">
+            <p class="tag tag-worldcup">Forecasting Product</p>
+            <h3>2026 World Cup Predictor</h3>
+            <p>ML-backed tournament forecasting platform with simulation, exact-score modeling, scenario controls, and an analyst-style intelligence desk.</p>
+            <ul>
+              <li>Compares match-outcome, xG, penalty, and ensemble components using leakage-safe historical features.</li>
+              <li>Ships simulation APIs, bracket UI, squad explorer, xG lab, evidence retrieval, and inspectable agent traces.</li>
+            </ul>
+            <div class="project-links">
+              <a href="https://github.com/KaiwenMo1/worldcup2026" class="inline-link strong" target="_blank" rel="noopener noreferrer">View GitHub Repo</a>
+            </div>
+            <p class="demo-note">Live deployment coming after final data/API cleanup.</p>
+          </div>
+          <div class="forecast-visual" aria-label="World Cup predictor model architecture">
+            <p class="forecast-title">Forecast stack</p>
+            <div class="forecast-orbit">
+              <span>Random Forest</span>
+              <span>Dixon-Coles</span>
+              <span>Elo</span>
+              <strong>Exact-score<br />ensemble</strong>
+            </div>
+            <dl>
+              <div><dt>Format</dt><dd>48 teams</dd></div>
+              <div><dt>Runs</dt><dd>100k sims</dd></div>
+              <div><dt>Serving</dt><dd>FastAPI</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <article class="project-card supporting-card project-stock">
+          <p class="tag tag-stock">C++ Systems Demo</p>
           <h3>C++ Stock Market Simulation</h3>
           <p>High-performance exchange simulator with order matching, median price reporting, trader analytics, and time-traveler strategy output.</p>
           <ul>
-            <li>Implemented a low-latency C++17 matching engine with priority queues, custom parsing, and strict price-time execution semantics.</li>
-            <li>Exposed multiple analytics modes through production-style CLI flags and a hosted Flask runner for demoing runtime behavior.</li>
+            <li>Implemented a C++17 matching engine with priority queues, custom parsing, and strict price-time execution semantics.</li>
+            <li>Processes large local inputs around 100 ms and exposes multiple analytics modes through production-style CLI flags.</li>
+            <li>Wrapped the private engine in a hosted Flask runner so recruiters can test behavior without exposing class-project source code.</li>
           </ul>
           <a href="https://stock-simulation-web.onrender.com" class="inline-link" target="_blank" rel="noopener noreferrer">Launch Stock Simulator</a>
         </article>
 
-        <article class="project-card project-transfer">
-          <p class="tag tag-transfer">Deployed Dashboard</p>
-          <h3>Transfer Rumor Market Impact Engine</h3>
-          <p>Deployed research dashboard for estimating how football transfer rumors and confirmed transfers affect public club stocks.</p>
+        <article class="project-card supporting-card project-mapreduce">
+          <p class="tag tag-mapreduce">Distributed Systems</p>
+          <h3>Distributed MapReduce Framework</h3>
+          <p>Python manager-worker framework with CLI job submission, mapper/reducer executables, and socket-based coordination.</p>
           <ul>
-            <li>Built a Python pipeline that ingests transfer records, stock prices, and football news, then converts them into event-study datasets.</li>
-            <li>Extracted transfer claims and scored credibility across source, journalist, club, rumor stage, and claim quality signals.</li>
-            <li>Shipped a static GitHub Pages dashboard with signal summaries, analyst Q&A, latest agent run, scenario swarm, and rumor simulator.</li>
+            <li>Implemented worker registration, task scheduling, map/reduce partitioning, heartbeat-aware coordination, and deterministic output generation.</li>
+            <li>Uses TCP/UDP socket communication across manager and worker processes to coordinate multi-stage jobs end-to-end.</li>
           </ul>
-          <a href="https://kaiwenmo1.github.io/soccer_transfer_rumor_impacts/" class="inline-link strong" target="_blank" rel="noopener noreferrer">Open Transfer Dashboard</a>
+          <p class="demo-note">Architecture video planned.</p>
         </article>
 
-        <article class="project-card project-search">
+        <article class="project-card supporting-card project-search">
           <p class="tag tag-search">Search Infra</p>
           <h3>Scalable Search Engine</h3>
-          <p>Multi-service search system with segmented index servers and a Flask search frontend.</p>
+          <p>Multi-service search system with segmented index servers, a Flask search frontend, and ranked retrieval over a document corpus.</p>
           <ul>
-            <li>Built a 3-shard index architecture to parallelize retrieval and combine results through a search aggregator.</li>
-            <li>Implemented query-time scoring that combines tf-idf relevance signals with link-based authority weighting.</li>
+            <li>Built a 3-shard index architecture to parallelize retrieval and merge ranked results through a search aggregator.</li>
+            <li>Implemented query-time scoring that combines tf-idf relevance signals with PageRank-style link authority.</li>
           </ul>
           <a href="search.html" class="inline-link">View Search Engine Snapshot</a>
         </article>
 
-        <article class="project-card project-asl">
+        <article class="project-card supporting-card project-asl">
           <p class="tag tag-asl">Applied ML</p>
           <h3>ASL Sign Translator</h3>
           <p>Real-time sign-language translation prototype combining browser landmark capture, WebSocket inference, and sequence modeling.</p>
@@ -151,18 +222,7 @@
           <p class="demo-note">Demo polish in progress.</p>
         </article>
 
-        <article class="project-card project-mapreduce">
-          <p class="tag tag-mapreduce">Distributed Systems</p>
-          <h3>Distributed MapReduce Framework</h3>
-          <p>Python manager-worker framework with CLI job submission, mapper/reducer executables, and socket-based coordination.</p>
-          <ul>
-            <li>Implemented scheduling, worker coordination, partitioning, fault-aware process handling, and output generation.</li>
-            <li>Best shown through a terminal architecture demo with multiple workers processing a job end-to-end.</li>
-          </ul>
-          <p class="demo-note">Architecture video planned.</p>
-        </article>
-
-        <article class="project-card project-social">
+        <article class="project-card supporting-card project-social">
           <p class="tag tag-social">Full Stack</p>
           <h3>Full-Stack Social Media Platform</h3>
           <p>React + Flask + SQLite app with authentication, posts, comments, likes, media uploads, and infinite scrolling feed.</p>
@@ -174,7 +234,7 @@
           <p class="demo-note">Free-tier hosting may take 30-60 seconds on first load.</p>
         </article>
 
-        <article class="project-card project-wade">
+        <article class="project-card supporting-card project-wade">
           <p class="tag tag-wade">NDA-Limited</p>
           <h3>Wade Trim MDP Geospatial Interface</h3>
           <p>NDA-restricted infrastructure visualization work. Public portfolio details are intentionally limited.</p>
@@ -185,7 +245,7 @@
           <p class="demo-note">Approved screenshot placeholder coming soon.</p>
         </article>
 
-        <article class="project-card full-width project-research">
+        <article class="project-card supporting-card full-width project-research">
           <p class="tag tag-research">Honors Research</p>
           <h3>Economics Honors Research (ECON 495)</h3>
           <p>Built an automated data pipeline to scrape and reconstruct transfer market activity for publicly traded soccer clubs, then measured event-window market reactions and abnormal returns.</p>
@@ -231,16 +291,22 @@
       </div>
     </section>
 
-    <section id="contact" class="container panel reveal">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:kaiwenmo@umich.edu">kaiwenmo@umich.edu</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/kevin-mo-702185295">https://www.linkedin.com/in/kevin-mo-702185295</a></p>
-      <p>GitHub: <a href="https://github.com/KaiwenMo1">Kaiwen Mo's github page</a></p>
+    <section id="contact" class="container contact-cta reveal">
+      <div>
+        <h2>Interested in the engineering behind the demos?</h2>
+        <p>I am happy to walk through architecture decisions, tradeoffs, and what I would build next.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn primary" href="mailto:kaiwenmo@umich.edu">Email Kaiwen</a>
+        <a class="inline-link" href="https://www.linkedin.com/in/kevin-mo-702185295" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="inline-link" href="https://github.com/KaiwenMo1" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Kaiwen Mo</p>
+    <p>© <span id="year"></span> Kaiwen Mo · Built with vanilla HTML, CSS, and JavaScript.</p>
+    <a href="#top">Back to top</a>
   </footer>
 
   <script src="script.js"></script>
